@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title><%= title %></title>
+    <link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/group.css">
+</head>
+
+<body>
+
+    <div class="margin30" >
+        <div class="search_tip">
+            公司信息管理
+        </div>
+        <div style="background: white; width: 92.4vw;height: 42.9vw;padding-top: 2.395vw;padding-left: 4.79vw">
+            <%if(type=="0"){%>
+            <!--公司信息管理-->
+            <div class="flex">
+                <div id="addGroup" class="otherBtn "><div class="i18n addBtn" data-title="addBtn">新增公司</div></div>
+            </div>
+
+            <%}else if(type == "1"){%>
+            <div class="flex">
+                <div id="addGroup" class="otherBtn "><div class="i18n addBtn" data-title="addBtn">新增部门</div></div>
+            </div>
+            <!--部门信息管理-->
+            <%}else if(type == "2"){%>
+            <!--职位信息管理-->
+            <div class="flex">
+                <div id="addGroup" class="otherBtn "><div class="i18n addBtn" data-title="addBtn">新增职位</div></div>
+            </div>
+            <%}%>
+            <div class="companylistInfoDiv"  style="margin-top: 1.796vw;">
+                <!--<div class="singelInfo">-->
+                    <!--<span class="" style="">上海分公司</span>-->
+                    <!--<img src="/static/images/admin/delete.png" class="" style="  position: absolute;-->
+  <!--top: -1vw;-->
+  <!--right: -0.3vw;-->
+  <!--width: 1vw;">-->
+                <!--</div>-->
+                <!--<div>-->
+                <!--<span class="label label-info">重庆分公司</span>-->
+                <!--<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                <!--</div>-->
+                <!--<div>-->
+                <!--<span class="label label-info">成都分公司</span>-->
+                <!--<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                <!--</div>-->
+            </div>
+            <div class="currentType" style="display: none" data-type="<%=type%>"></div>
+        </div>
+
+    </div>
+</body>
+<script src="/static/javascripts/lib/jquery.js"></script>
+<script src="/static/javascripts/lib/layer/layer.js"></script>
+<script src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/admin/companyInfo/list.js"></script>
+
+
+</html>
+

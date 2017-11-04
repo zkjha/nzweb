@@ -1,0 +1,67 @@
+<html>
+	<head></head>
+	<body style="">
+		<img width="290px" height="290px" src="./bg01.png">
+		<img width="90px" height="90px" src="./1.jpg">
+		<div id="imgBox"></div>
+	
+	</body>
+	<script src="./jquery.js"></script>
+	<script src="./Canvas2Image.js"></script>
+	<script type="text/javascript">
+		function draw(fn){
+			var data1= new Array();
+			for(var i=0;i<$('img').length;i++){
+				data1[i]=$('img').eq(i).attr('src');
+			}
+			var c=document.createElement('canvas'),
+				ctx=c.getContext('2d'),
+				len=data1.length;
+			c.width=248;
+			c.height=248;
+//			ctx.rect(0,0,c.width,c.height);
+			ctx.fillStyle='transparent';//画布填充颜色
+			ctx.fill();
+            function circleImg(ctx, img, x, y, r) {
+                ctx.save();
+                var d =2 * r;
+                var cx = x + r;
+                var cy = y + r;
+                ctx.arc(cx, cy, r, 0, 2 * Math.PI);
+                ctx.clip();
+                ctx.drawImage(img, x, y, d, d);
+                ctx.restore();
+            }
+			function drawing(n){
+				if(n<len){
+					var img=new Image;
+					//img.crossOrigin = 'Anonymous'; //解决跨域
+					img.src=data1[n];
+					img.onload=function(){
+					    if(n == 0){
+                            ctx.drawImage(img,0,0,248,248);
+                        }else{
+                            circleImg(ctx,img,0,0,103.5);
+						}
+						drawing(n+1);//递归
+//						drawing(3);//递归
+					}
+				}else{
+					//保存生成作品图片
+					convertCanvasToImage(c);
+//					Canvas2Image.saveAsJPEG(c); //保存到电脑
+				}
+			}
+			drawing(0);
+		}
+		function convertCanvasToImage(canvas) {
+			var hc_image = new Image();
+			hc_image.src = canvas.toDataURL("image/png");
+			$('#imgBox').html(hc_image);
+		}
+		draw()
+	
+	
+	</script>
+
+</html>

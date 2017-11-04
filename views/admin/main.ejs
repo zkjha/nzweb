@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <!--配置本业默认国际化文件位置-->
+    <meta name="description" id="i18n_pagename" content="main">
+
+
+    <meta name="author" content="">
+    <title><%= title %></title>
+    <link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/manage.css">
+</head>
+
+<body>
+<!--<div class="navbar &lt;!&ndash;navbar-inverse&ndash;&gt; navbar-fixed-top" style="position: absolute;left: 13.02vw;height: 4.9479vw" role="navigation">-->
+<div class="navbar navbar-fixed-top" style="background:white;position: absolute;left: 13.02vw;height: 4.9479vw" role="navigation">
+    <div class="container-fluid">
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">-->
+                <!--<span class="sr-only">纳智考勤迎宾管理系统</span>-->
+                <!--<span class="icon-bar"></span> <span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<img src="/static/images/logo.png" style="height: 50px;float: left;margin-top: 5px">-->
+            <!--<a class="navbar-brand i18n" style="font-family:微软雅黑;font-size:30px;margin-left: -10px;line-height: 27px;" data-title="title" href="javascript:void(0);">纳智考勤迎宾管理系统</a>-->
+        <!--</div>-->
+        <!--<div class="navbar-collapse collapse">-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li><a href="javascript:void(0);"><label class="i18n" data-title="welcome">欢迎您，</label>&nbsp&nbsp</a>-->
+                <!--</li>-->
+                <!--<li><a id="quit" href="javascript:void(0);" class="i18n" data-title="quit">退出</a>-->
+                <!--</li>-->
+                <!--<li><a href="modifyPwdIndex.do" target="J_iframe" class="i18n" data-title="Modifypassword">修改密码</a>-->
+                <!--</li>-->
+                <!--<li class="changLan">-->
+                    <!--<select id="changLan_select">-->
+                        <!--<option value="zh" class="i18n" data-title="Chinese">简体中文</option>-->
+                        <!--<option value="en" class="i18n" data-title="English">英文</option>-->
+                    <!--</select>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <div style="text-align: right;padding-top: 15px">
+            <img style="width: 2.6vw;margin-right:0.5625vw" src="/static/images/4.jpg" />
+            <span class="username" style="font-size: 0.833vw "></span>
+            <span style="margin-right:1.5625vw;font-size: 0.833vw ">你好,欢迎登陆!</span>
+            <span style="margin-right: 1.5625vw"><span style="font-size: 0.52vw" class="glyphicon glyphicon-pencil"></span><a style="color: black;cursor: pointer;;font-size: 0.833vw">修改密码</a></span>
+            <div id="quit" class="btn" style="display: inline-block;margin-right: 2.083vw;width: 4.1666vw;height: 1.5625vw;background: #037fdd;color:white ;font-size: 0.729vw;line-height: 0.6vw;">
+                <span  class="glyphicon glyphicon-log-out" style="font-size: 0.52vw;margin-left: -0.1vw;"></span> 退出</div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar" style="padding-left: 0px">
+            <div>
+                <img style="margin-top: 1.3vw;margin-left: 0.885vw;width: 8.895vw;margin-bottom: 1.3vw;" src="/static/images/admin/logo.png">
+            </div>
+            <ul class="nav nav-sidebar nav-ul" >
+                <li class="lpy-sidebar-first">
+                    <img style="" src="/static/images/admin/company.png">
+                    <a href="javascript:void(0)" class="i18n" data-title="resource_management">公司信息管理</a><span  class="glyphicon glyphicon-triangle-bottom"></span></li>
+                <ul class="nav nav-sidebar lpy-sidebar-second">
+                    <li class="active"><a class="i18n" href="javascript:void(0)" data-title="Supplies_list" data-url="/admin/hasLogin/companyInfo/list?type=0">公司信息管理</a></li>
+                    <li class="active"><a class="i18n" href="javascript:void(0)" data-title="Supplies_list" data-url="/admin/hasLogin/companyInfo/list?type=1">部门信息管理</a></li>
+                    <li class="active"><a class="i18n" href="javascript:void(0)" data-title="Supplies_list" data-url="/admin/hasLogin/companyInfo/list?type=2">职位信息管理</a></li>
+                </ul>
+            </ul>
+            <ul class="nav nav-sidebar nav-ul">
+                <li class="lpy-sidebar-first" >
+                    <img style="" src="/static/images/admin/manager.png">
+                    <a href="javascript:void(0)" class="i18n" data-title="resource_management">权限管理</a>
+                    <span  class="glyphicon glyphicon-triangle-bottom"></span>
+                </li>
+                <ul class="nav nav-sidebar lpy-sidebar-second">
+                    <li class="active"><a class="i18n" href="javascript:void(0)" data-title="Supplies_list" data-url="/admin/hasLogin/manager/list">管理员列表</a></li>
+                </ul>
+            </ul>
+            <ul class="nav nav-sidebar nav-ul">
+                <li class="lpy-sidebar-first">
+                    <img style="" src="/static/images/admin/checkWork.png">
+                    <a href="javascript:void(0)" class="i18n" data-title="resource_management">考勤规则管理</a><span  class="glyphicon glyphicon-triangle-bottom"></span></li>
+                <ul class="nav nav-sidebar lpy-sidebar-second">
+                    <li class="active">
+                        <a class="i18n" href="javascript:void(0)" data-title="Supplies_list" data-url="/admin/hasLogin/checkWork/list">考勤规则列表</a>
+                    </li>
+                </ul>
+            </ul>
+            <ul class="nav nav-sidebar nav-ul">
+
+                <li class="lpy-sidebar-first">
+                    <img style="" src="/static/images/admin/cam.png">
+                    <a href="javascript:void(0)" class="i18n" data-title="resource_management">摄像头管理</a><span  class="glyphicon glyphicon-triangle-bottom"></span></li>
+                <ul class="nav nav-sidebar lpy-sidebar-second">
+                    <li class="active"><a class="i18n" href="javascript:void(0)" data-title="Supplies_list" data-url="/admin/hasLogin/camera/list">摄像头列表</a></li>
+                </ul>
+            </ul>
+            <ul class="nav nav-sidebar nav-ul">
+                <li class="lpy-sidebar-first">
+                    <img style="" src="/static/images/admin/userManage.png">
+                    <a href="javascript:void(0)" class="i18n" data-title="resource_management">人像库管理</a><span  class="glyphicon glyphicon-triangle-bottom"></span></li>
+                <ul class="nav nav-sidebar lpy-sidebar-second">
+                    <li class="active"><a class="i18n" href="javascript:void(0)" data-title="Supplies_list" data-url="/admin/hasLogin/photo/list?type=0">员工信息管理列表</a></li>
+                    <li class="active"><a class="i18n" href="javascript:void(0)" data-title="Supplies_list" data-url="/admin/hasLogin/photo/list?type=2">访客信息管理列表</a></li>
+                </ul>
+            </ul>
+            <ul class="nav nav-sidebar nav-ul">
+                <li class="lpy-sidebar-first">
+                    <img style="" src="/static/images/admin/history.png">
+                    <a href="javascript:void(0)" class="i18n" data-title="resource_management">历史记录查询</a><span  class="glyphicon glyphicon-triangle-bottom"></span></li>
+                <ul class="nav nav-sidebar lpy-sidebar-second">
+                    <li class="active"><a class="i18n" href="javascript:void(0)" data-title="Supplies_list" data-url="/admin/hasLogin/history/list">历史记录列表</a></li>
+                    <li class="active"><a class="i18n" href="javascript:void(0)" data-title="Supplies_list" data-url="/admin/hasLogin/history/checkWorkList">考勤记录查询</a></li>
+                </ul>
+            </ul>
+            <!--<ul class="nav nav-sidebar">-->
+                <!--<li class="lpy-sidebar-first"><a href="javascript:void(0)" class="i18n" data-title="resource_management">迎宾语管理</a></li>-->
+                <!--<ul class="nav nav-sidebar lpy-sidebar-second">-->
+                    <!--<li class="active"><a class="i18n" href="javascript:void(0)" data-title="Supplies_list" data-url="/admin/hasLogin/greetingWord/list">迎宾语列表</a></li>-->
+                <!--</ul>-->
+            <!--</ul>-->
+            <!--<ul class="nav nav-sidebar">-->
+                <!--<li class="lpy-sidebar-first"><a href="javascript:void(0)" class="i18n" data-title="resource_management">会议管理</a></li>-->
+                <!--<ul class="nav nav-sidebar lpy-sidebar-second">-->
+                    <!--<li class="active"><a class="i18n" href="javascript:void(0)" data-title="Supplies_list" data-url="/admin/hasLogin/meeting/list">会议列表</a></li>-->
+                <!--</ul>-->
+            <!--</ul>-->
+            <div style="color: white;position: absolute;bottom: 3px;left: 9px;font-family: 宋体;">powerd by nazhiAI</div>
+        </div>
+        <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">-->
+        <div class="col-sm-9  col-md-10  main" style="margin-left: 13.02vw;width: 86.9791vw;background: #eaeef1">
+            <iframe id="J_iframe" name="J_iframe" class="iframe"> </iframe>
+        </div>
+
+    </div>
+</div>
+
+</body>
+<script src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/admin/manage"></script>
+</html>

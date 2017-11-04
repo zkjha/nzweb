@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/group.css">
+
+    <title><%= title %></title>
+</head>
+
+<body>
+<div class="margin30">
+    <div class="search_tip" style="font-size: 1.077vw">新增考勤规则</div>
+    <form class="addForm">
+        <div class="addInput">
+            <label class="addLabel LabelMax" data-title="strDealer">规则名称:</label>
+            <input id="ruleId" type="text" class="" selectattr="strDealer_placeholder" placeholder="请输入规则名称">
+
+        </div>
+        <div class="addInput marginRight">
+            <label class="addLabel LabelMax" data-title="strComeFrome">最早签到时间:</label>
+            <input id="alcheckin" type="time" class="" selectattr="strComeFrome_placeholder"  placeholder="请选择上班时间">
+
+        </div><div class="addInput">
+            <label class="addLabel LabelMax" data-title="strComeFrome">最晚签到时间:</label>
+            <input id="checkin" type="time" class="" selectattr="strComeFrome_placeholder"  placeholder="请选择上班时间">
+
+        </div>
+        <div class="addInput marginRight">
+            <label class="addLabel LabelMax" data-title="strComeFrome">最早签退时间:</label>
+            <input id="checkout" type="time" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入下班时间">
+
+        </div>
+        <div class="addInput">
+            <label class="addLabel LabelMax" data-title="strComeFrome">最晚签退时间:</label>
+            <input id="lacheckout" type="time" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入下班时间">
+
+        </div>
+
+        <div class="addBtn">
+            <div type="button" id="addbutton" style="margin-left: 6.589vw;" class=" addbutton  " data-title="addButton">新增</div>
+        </div>
+
+
+
+    </form>
+</div>
+</body>
+<script src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/admin/checkWork/add.js"></script>
+
+</html>
+
