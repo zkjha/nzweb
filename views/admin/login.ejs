@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+
+    <!--在此配置本页面国际化文件的名字-->
+    <meta id="i18n_pagename" content="index">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title><%= title %></title>
+    <script type="text/javascript">
+        (function(){
+
+            var css ='<link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/login.css">'
+            document.write(css);
+        })();
+    </script>
+
+</head>
+
+<body style="background-image: url('/static/images/login/login_bg.png');background-repeat: no-repeat;background-size: cover;">
+
+<div class="container">
+    <div class="logo" style="position: absolute;left: 2.083vw;top: 2.083vw;">
+        <img src="/static/images/login/logo.png" style="width: 5.2vw;height: 3.125vw">
+    </div>
+
+    <div style="position:absolute;top:2.34375vw;left:8.177vw;font-size: 1.718vw;color: #d1e4ff;">纳智天地后台管理系统</div>
+
+    <form class="form-signin" style="position: absolute;left:53.229vw;
+    top: 17.291vw;width: 21.875vw;height: 21.875vw;border-radius: 7px;border: 1px solid rgba(0, 145, 255, 0.58);background: rgba(255, 255, 255, 0.09)">
+        <div style="color:#01a6ff;font-size: 1.25vw;margin-bottom: 1.875vw">用户登录/User login</div>
+        <div class="bgColor" style="margin-bottom: 1.5625vw ">
+            <div  style="">
+                <img class="login_icon" style="" src="/static/images/login/userName.png"></div>
+            <input  id="username" type="text" placeholder="请输入用户名">
+        </div>
+        <div class="bgColor" style="margin-bottom: 1.0416vw ">
+            <div style="">
+                <img class="login_icon"  src="/static/images/login/passwordIcon.png"></div>
+            <input style="" id="password" type="password" placeholder="请输入密码">
+        </div>
+        <div style="display: none;color: white;font-size: 0.733vw;position: relative;margin-bottom: 2.447vw">
+            <input type="checkbox">
+            <div style=" position: absolute;top: 0px;left: 0.833vw;">下次自动登录</div>
+            <a style="position: absolute;top: 0px;right: 1.633vw;color: white;cursor: pointer;">忘记密码</a>
+        </div>
+        <!--<div class="bgColor"><div><img src="/static/images/login/passwordIcon.png"></div><input style="" id="password" type="password" placeholder="请输入密码"></div>-->
+
+            <!--<label for="inputEmail" class="sr-only">用户名</label>-->
+        <!--<input type="text" id="inputEmail" class="form-control i18n-input" selectattr="userName_placeholder" placeholder="用户名"  autofocus>-->
+        <!--<input type="password" id="inputPassword" selectattr="password_placeholder" data-type="email" class="form-control password i18n-input" placeholder="密码" >-->
+
+        <!--<label for="inputPassword" class="sr-only">密码</label>-->
+
+
+        <div id="loginBtn" class="loginBtn"  data-title="login">登录</div>
+        <!--<div><span class="changeLoginMethod i18n" data-title="phoneLogin" data-method="email">手机登录</span></div>-->
+    </form>
+    <!--<div class="form-signin phone hidden">-->
+        <!--<h2 class="form-signin-heading i18n" data-title="title">U-LABOR</h2>-->
+        <!--<div class="phoneLogin">-->
+            <!--<div class="flex1">-->
+                <!--<label class="i18n" data-title="area">地区</label>-->
+            <!--</div>-->
+            <!--<div class="phoneInput">-->
+                <!--<select id="areaNo">-->
+                    <!--<option value="+86" selected>中国</option>-->
+                    <!--<option value="+001">America</option>-->
+                    <!--<option value="+44">Britain</option>-->
+                    <!--<option value="+49">Deutschland</option>-->
+                <!--</select>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="phoneLogin">-->
+            <!--<div class="flex1">-->
+                <!--<label class="areaNo">+86</label>-->
+            <!--</div>-->
+            <!--<div class="phoneInput">-->
+                <!--<input type="text" id="strUserPhone" class="phoneNum">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="phoneLogin">-->
+            <!--<div class="flex1">-->
+                <!--<label class="i18n" data-title="password_placeholder" >密码</label>-->
+            <!--</div>-->
+            <!--<div class="phoneInput">-->
+                <!--<input id="phonePassword" type="password" class="phone-password password i18n-input" data-type="phone" selectattr="password_placeholder" placeholder="请输入密码">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div id="loginBtn1" class=" btn btn-lg btn-primary btn-block i18n loginBtn" data-type="phone" data-title="login">登录</div>-->
+        <!--<div><span class="changeLoginMethod i18n" data-title="emailLogin" data-method="phone">邮箱登录</span></div>-->
+    <!--</div>-->
+
+</div> <!-- /container -->
+
+</body>
+<script  src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/login"></script>
+
+
+</html>
+

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/group.css">
+
+    <title><%= title %></title>
+</head>
+
+<body>
+<div class="margin30">
+    <div class="search_tip" style="font-size: 1.077vw">修改信息</div>
+    <form class="addForm" style="">
+    <!--<form class="add">-->
+        <!--<div class="addInput">-->
+            <!--<label class="" data-title="strDealer">图片:</label>-->
+            <!--<img id="userImg" style="height: 5px;height: 50px" src="">-->
+            <!--<span id="fileDiv"></span>-->
+            <!--<div id="fileBtn"  class="btn btn-primary uploadfile" style="width: 15%">上传文件</div>-->
+        <!--</div>-->
+        <!--<%if(type == 0){%>-->
+        <!--<div class="addInput">-->
+            <!--<label class="" data-title="strDealer" style="float:left">姓名:</label>-->
+            <!--<input id="userName" type="text" class="form-control" selectattr="strComeFrome_placeholder"  placeholder="请输入姓名">-->
+        <!--</div>-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">性别:</label>-->
+            <!--<label class="input_radio"><input type="radio"  name="sex" value="0">男</label>-->
+            <!--<label class="input_radio"><input type="radio" name="sex" value="1">女</label>-->
+        <!--</div>-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">身份证号:</label>-->
+            <!--<input id="IDnumber" type="text" class="form-control i18n-input" selectattr="strComeFrome_placeholder"  placeholder="请输入身份证号码">-->
+        <!--</div>-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">工号:</label>-->
+            <!--<input id="jobNumber" type="text" class="form-control i18n-input" selectattr="strComeFrome_placeholder"  placeholder="请输入工号">-->
+        <!--</div>-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">生日:</label>-->
+            <!--<input id="brithDay" type="date" class="form-control i18n-input" selectattr="strComeFrome_placeholder"  placeholder="请选择生日">-->
+        <!--</div>-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">入职时间:</label>-->
+            <!--<input id="comeDay" type="date" class="form-control i18n-input" selectattr="strComeFrome_placeholder"  placeholder="请选择入职时间">-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash;城市&ndash;&gt;-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">城市:</label>-->
+            <!--<select id="city" class=""></select>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash;公司&ndash;&gt;-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">公司:</label>-->
+            <!--<select id="company" class=""></select>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;部门&ndash;&gt;-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">部门:</label>-->
+            <!--<select id="department" class=""></select>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash;职位&ndash;&gt;-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">职位:</label>-->
+            <!--<select id="position" class=""></select>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;考勤规则&ndash;&gt;-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">考勤规则:</label>-->
+            <!--<select id="attendance" class=""></select>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;louhao&ndash;&gt;-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">楼号:</label>-->
+            <!--<input id="addr" type="text" class="form-control i18n-input" selectattr="strComeFrome_placeholder"  placeholder="请输入上班楼号">-->
+        <!--</div>-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">名单:</label>-->
+            <!--<label class="input_radio_group"><input type="radio"  name="group" value="0">白名单</label>-->
+            <!--<label class="input_radio_group"><input type="radio" name="group" value="1">黑名单</label>-->
+        <!--</div>-->
+
+        <!--<%}else if(type == 2){%>-->
+        <!--<div class="addInput">-->
+            <!--<label class="" data-title="strDealer" style="float:left">姓名:</label>-->
+            <!--<input id="userName" type="text" class="form-control" selectattr="strComeFrome_placeholder"  placeholder="请输入姓名">-->
+        <!--</div>-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">性别:</label>-->
+            <!--<label class="input_radio"><input type="radio"  name="sex" value="0">男</label>-->
+            <!--<label class="input_radio"><input type="radio" name="sex" value="1">女</label>-->
+        <!--</div>-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">身份证号:</label>-->
+            <!--<input id="IDnumber" type="text" class="form-control i18n-input" selectattr="strComeFrome_placeholder"  placeholder="请输入身份证号码">-->
+        <!--</div>-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">来访日期:</label>-->
+            <!--<input id="comeDay" type="date" class="form-control i18n-input" selectattr="strComeFrome_placeholder"  placeholder="请选择来访日期">-->
+        <!--</div>-->
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">来访时间:</label>-->
+            <!--<input id="comeTime" type="time" class="form-control i18n-input" selectattr="strComeFrome_placeholder"  placeholder="请选择来访时间">-->
+        <!--</div>-->
+        <!--<%}%>-->
+
+
+
+
+    <!--</form>-->
+    <%if(type == 0){%>
+        <!--员工-->
+        <div class="" style="margin-bottom:1.1976vw ">
+            <div class="addLabel" style="">上传头像:</div>
+            <img id="fileDiv" style="width: 3.5928vw;height: 3.5928vw;border:0.119vw;margin-left: 1.1976vw;" src="/static/images/admin/defaultImg.png">
+            <div id="fileBtn"  class="uploadfile" style="">上传图片</div>
+        </div>
+        <!--上传图片或者视频-->
+        <div class="addInput" style="">
+            <div class="addLabel" data-title="strDealer" style="">姓名:</div>
+            <input id="userName"  style="" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入姓名">
+        </div>
+        <div class="addInput marginRight" style="display: inline-block">
+            <div class="addLabel i18n" data-title="strDealer" >性别:</div>
+            <div class="input_radio gender my_inlineBlock marginLeft20 radio_select" data-type="0" style="">男
+            </div><div class="input_radio gender my_inlineBlock" data-type="1" style="">女
+            </div>
+        </div>
+        <div class="addInput">
+            <div class="addLabel i18n" data-title="strDealer">身份证号:</div>
+            <input id="IDnumber" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入身份证号码">
+        </div>
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">工号:</div>
+            <input id="jobNumber" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入工号">
+        </div>
+        <div class="addInput ">
+            <div class="addLabel i18n" data-title="strDealer">生日:</div>
+            <input id="brithDay" type="date" class="" selectattr="strComeFrome_placeholder"  placeholder="请选择生日">
+        </div>
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">入职时间:</div>
+            <input id="comeDay" type="date" class="" selectattr="strComeFrome_placeholder"  placeholder="请选择入职时间">
+        </div>
+
+        <!--城市-->
+        <div class="addInput">
+            <div class="addLabel" data-title="strDealer">城市:</div>
+            <select id="city" class=""></select>
+        </div>
+
+        <!--公司-->
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">公司:</div>
+            <select id="company" class=""></select>
+        </div>
+        <!--部门-->
+        <div class="addInput">
+            <div class="addLabel i18n" data-title="strDealer">部门:</div>
+            <select id="department" class=""></select>
+        </div>
+
+        <!--职位-->
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">职位:</div>
+            <select id="position" class=""></select>
+        </div>
+        <!--考勤规则-->
+        <div class="addInput">
+            <div class="addLabel i18n" data-title="strDealer">考勤规则:</div>
+            <select id="attendance" class=""></select>
+        </div>
+        <!--louhao-->
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">楼号:</div>
+            <input id="addr" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入上班楼号">
+        </div>
+        <div class="addInput">
+            <div class="addLabel i18n" data-title="strDealer">名单:</div>
+            <div class="input_radio group my_inlineBlock marginLeft20 radio_select" data-type="0" style="">白名单
+            </div><div class="input_radio group my_inlineBlock" data-type="1" style="">黑名单
+            </div>
+        </div>
+
+    <%}else if(type == 2){%>
+        <!--访客-->
+        <div class="" style="margin-bottom:1.1976vw ">
+            <div class="addLabel" data-title="strDealer">上传图片:</div>
+            <img id="fileDiv" class="fileDiv" src="/static/images/5.jpg">
+            <div id="fileBtn"  class="uploadfile" >上传图片</div>
+        </div>
+        <div class="addInput">
+            <div class="addLabel" data-title="strDealer">姓名:</div>
+            <input id="userName" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入姓名">
+        </div>
+        <div class="addInput marginRight" style="display: inline-block">
+            <div class="addLabel i18n" data-title="strDealer" >性别:</div>
+            <div class="input_radio my_inlineBlock gender radio_select marginLeft20" data-type="0" style="">男
+            </div><div class="input_radio gender my_inlineBlock" data-type="1" style="">女
+            </div>
+        </div>
+        <div class="addInput">
+            <div class="addLabel i18n" data-title="strDealer">身份证号:</div>
+            <input id="IDnumber" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入身份证号码">
+        </div>
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">来访日期:</div>
+            <input id="comeDay" type="date" class="" selectattr="strComeFrome_placeholder"  placeholder="请选择来访日期">
+        </div>
+        <div class="addInput">
+            <div class="addLabel i18n" data-title="strDealer">来访时间:</div>
+            <input id="comeTime" type="time" class="" selectattr="strComeFrome_placeholder"  placeholder="请选择来访时间">
+        </div>
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">名单:</div>
+            <div class="input_radio group my_inlineBlock marginLeft20 radio_select" data-type="0" style="">白名单
+            </div><div class="input_radio group my_inlineBlock" data-type="1" style="">黑名单
+            </div>
+        </div>
+    <% } %>
+        <div class="">
+            <div type="button" data-id="<%=personid%>" data-type="<%=type%>" id="addbutton"  class=" addbutton i18n " data-title="addButton">修改</div>
+        </div>
+    </form>
+
+
+</div>
+</body>
+<script src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/admin/photo/update.js"></script>
+
+</html>
+

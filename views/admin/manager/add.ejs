@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/group.css">
+
+    <title><%= title %></title>
+</head>
+
+<body>
+<div class="margin30">
+    <div class="search_tip" style="font-size: 1.077vw">新增管理员</div>
+    <form class="addForm">
+
+        <div class="addInput">
+            <label class="addLabel i18n" data-title="strDealer">用户名:</label>
+            <input id="usernam" type="text" class="" selectattr="strDealer_placeholder" placeholder="请输入用户名">
+
+        </div>
+        <div class="addInput marginRight">
+            <label class="addLabel i18n" data-title="strComeFrome">密码:</label>
+            <input id="password" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入密码">
+
+        </div>
+        <div class="addInput">
+            <label class="addLabel i18n" data-title="decMoney">权限:</label>
+            <select id="authority">
+                <option value="0" selected>高级管理员</option>
+                <option value="1">普通管理员</option>
+            </select>
+
+        </div>
+        <div class="">
+            <div type="button" id="addbutton" style="margin-left: 4.4vw;" class="addbutton i18n " data-title="addButton">新增</div>
+        </div>
+
+
+
+    </form>
+</div>
+</body>
+<script src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/admin/manager/add.js"></script>
+
+</html>
+

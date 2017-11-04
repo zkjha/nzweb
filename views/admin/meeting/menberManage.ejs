@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title><%= title %></title>
+    <link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/group.css">
+</head>
+
+<body>
+<div class="margin30">
+    <div class="meetingInfo">
+    </div>
+    <!--公司信息管理-->
+    <div class="flex">
+        <span id="addGroup" class="btn btn-large btn-primary otherBtn "><i class="glyphicon-plus"></i><span class="i18n" data-title="addBtn">新增参会人员</span></span>
+        <span id="addGroup" class="btn btn-large btn-primary otherBtn "><i class="glyphicon-plus"></i><span class="i18n" data-title="addBtn">批量删除人员</span></span>
+    </div>
+    <div class="companylistInfoDiv">
+    </div>
+</div>
+</body>
+<script src="/static/javascripts/lib/jquery.js"></script>
+<script src="/static/javascripts/lib/layer/layer.js"></script>
+<script src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/admin/meeting/meetingMenberList.js"></script>
+
+
+</html>
+

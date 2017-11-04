@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title><%= title %></title>
+    <link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/group.css">
+</head>
+
+<body>
+<div class="margin30">
+    <div class="search_tip">请选择查询条件<span>(非必选项)</span></div>
+    <div class="search_param">
+            <select id="department" class="searchSelect">
+                <option value="-1">请选择部门</option>
+            </select>
+            <div class="searchInput" >
+                <!--<span>开始时间：</span>-->
+                <input class="form-control" placeholder="请选择起始时间" id="startTime" type="text"/>
+            </div>
+            <div class="searchInput">
+                <!--<span>结束时间：</span>-->
+                <input class="form-control" placeholder="请选择起始时间" id="endTime" type="text"/>
+            </div>
+            <div class="searchInput" >
+                <input id="userName" type="text" class="form-control" placeholder="请输入要查询人员姓名">
+            </div>
+            <div class="searchInput">
+                <input id="employeenum" type="text" class="form-control" placeholder="请输入要查询人员工号">
+            </div>
+            <span id="addGroup" class="otherBtn "><span class="i18n addBtn" data-title="addBtn">所有考勤查询</span></span>
+            <span id="abSearch" class=" otherBtn "><span class="i18n addBtn" data-title="addBtn">异常考勤查询</span></span>
+            <span id="exports" class=" otherBtn "><span class="i18n addBtn" data-title="addBtn">导出</span></span>
+
+            <!--<span>时间从：</span>-->
+            <!--<input id="dateForm" class="form-control historyDate" placeholder="请选择起始时间" id="startTime" type="date"/>-->
+            <!--<span>到</span>-->
+            <!--<input id="dateTo" class="form-control historyDate" id="endTime" type="date"/>-->
+        </div>
+
+
+        <!--<span id="exports" class="btn btn-large btn-primary otherBtn "><a href="/admin/hasLogin/ajaxHistory/testExcel">导出</a></span>-->
+
+</div>
+<div class="margin30">
+    <div class="search_tip">
+        考勤记录管理列表
+    </div>
+    <table id="testId"  class="table table-hover" style="background: white">
+        <thead>
+        <tr>
+            <!--<th class="i18n" data-title="groupName">头像</th>-->
+            <th class="i18n" data-title="groupName">姓名</th>
+            <th class="i18n" data-title="groupName">部门</th>
+            <th class="i18n" data-title="groupName">工号</th>
+            <th class="i18n" data-title="createTime">日期</th>
+            <th class="i18n" data-title="createTime">签到时间</th>
+            <th class="i18n" data-title="createTime">签退时间</th>
+            <th class="i18n" data-title="createTime">考勤时间</th>
+            <th class="i18n" data-title="createTime">签到结果</th>
+            <!--<th class="i18n" data-title="createTime">操作</th>-->
+        </tr>
+        </thead>
+        <tbody id="j_body"></tbody>
+    </table>
+    <div class="page_div">
+        <span id="j_footer"></span>
+        <span id="j_pageNum" class="j_pageNum"></span>
+    </div>
+    <!--<a id="dlink" style="display:none">ceshi</a>-->
+</div>
+</body>
+<script src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/admin/history/checkWorkList.js"></script>
+
+</html>
+

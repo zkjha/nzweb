@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<link>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/stylesheets/lib/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="/static/stylesheets/main.css" type="text/css" />
+<meta name="description" content="">
+<meta name="author" content="">
+
+
+<title>nztd</title>
+<script type="text/javascript">
+</script>
+
+</head>
+
+<body >
+<div class="main mainDiv" style="overflow:hidden;background-image:url('/static/images/sign/bg.png');background-repeat: no-repeat;background-size: cover">
+
+    <!--<div class="flip-container" ontouchstart="this.classList.toggle('hover');">-->
+        <!--<div class="flipper">-->
+            <!--<div class="front">-->
+                <!--<img class="bgImg" src="/static/images/7.jpg">-->
+            <!--</div>-->
+            <!--<div class="back">-->
+                <!--<img class="bgImg" src="/static/images/5.jpg">-->
+            <!--</div>-->
+        <!--</div>-->
+    <div class="" style="background: url('/static/images/sign/header.png');height: 7.291vw;text-align:center;color: white;">
+        <img style="position:absolute;left:1.5625vw;top:1.5625vw;width: 5.052vw" src="/static/images/sign/logo.png">
+        <div style="height: 100%;padding-top: 1.5625vw;font-size: 2.5vw;font-family:方正兰亭">2017人工智能-人脸识别峰会</div>
+        <div style="position: absolute;right: 1.5625vw;font-size: 1.5625vw;top:2.34375vw">08:30:54</div>
+    </div>
+    <!--左边点图-->
+    <div style="position: absolute;top:50%">
+        <img src="/static/images/sign/leftPoint.png" />
+    </div>
+    <!--右侧点-->
+    <div style="position: absolute;top:80%;right: 0px">
+        <img src="/static/images/sign/rightPoint.png"/>
+    </div>
+    <!--右侧切换摄像头-->
+    <div style="position: absolute;top:9vw;right: 2.08vw">
+        <img style="width: 4.6875vw" src="/static/images/sign/changeCam.png" />
+    </div>
+    <!--右侧圆形进度条-->
+    <div style="position: absolute;top:17.5vw;right: 2.08vw;width: 4.791vw;height: 4.791vw;">
+        <canvas id="canvas" width="92"  height="92">
+
+        </canvas>
+    </div>
+    <div id="" class="menberBg" style="margin-left: 5.729vw;margin-right: 9.8958vw">
+        <!--&lt;!&ndash;<div style="width: 118px;height: 146px;position: absolute;left: 19px;top: 19px; border-radius: 4px;background-color: rgb(54,122,173);color:white">&ndash;&gt;-->
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+        <!--<div style="width: 6.1458vw;height: 7.6vw;display: inline-block;margin: 0.9895vw 0vw 0vw 0.595vw; border-radius: 4px;background-color: rgb(54,122,173);color:white">-->
+            <!--<img style="width: 4.583vw;height:4.583vw;border-radius: 50%;margin: 0.78125vw 0.78125vw 0.52vw 0.78125vw" src="/static/images/5.jpg">-->
+            <!--<div style="text-align: center;font-size: 0.9473vw">李易峰</div>-->
+        <!--</div>-->
+
+
+    </div>
+    <!--展示区域的图片展示-->
+    <!--<div style="position: absolute;top:10.4166vw;left: 21.9166vw;width: 16.666vw;height: 19.27vw;background: url('/static/images/sign/showBg.png');background-repeat: no-repeat;background-size: cover">-->
+        <!--<div style="text-align: center;padding-top: 2.08vw;height: 13.297vw">-->
+            <!--<img style="width: 5.729vw;height: 5.729vw;border-radius: 50%;" src="/static/images/4.jpg">-->
+        <!--</div>-->
+        <!--<img style="width:2.7vw;height:2.7vw;position: absolute;top: 10.3125vw;left:6.9791vw" src="/static/images/sign/right.png">-->
+        <!--<div style="text-align: center">-->
+            <!--<div style="font-size: 1.5625vw;color:#ffb4bc">欢迎光临</div>-->
+            <!--<div style="font-size: 1.25vw">黄忠中</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;展示区域的图片展示&ndash;&gt;-->
+    <!--<div style="position: absolute;top:10.4166vw;left: 40.666vw;width: 16.666vw;height: 19.27vw;background: url('/static/images/sign/showBg.png');background-repeat: no-repeat;background-size: cover">-->
+        <!--<div style="text-align: center;padding-top: 2.08vw;height: 13.297vw">-->
+            <!--<img style="width: 5.729vw;height: 5.729vw;border-radius: 50%;" src="/static/images/4.jpg">-->
+        <!--</div>-->
+        <!--<img style="width:2.7vw;height:2.7vw;position: absolute;top: 10.3125vw;left:6.9791vw" src="/static/images/sign/right.png">-->
+        <!--<div style="text-align: center">-->
+            <!--<div style="font-size: 1.5625vw;color:#ffb4bc">欢迎光临</div>-->
+            <!--<div style="font-size: 1.25vw">黄忠中</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;展示区域的图片展示&ndash;&gt;-->
+    <!--<div style="position: absolute;top:10.4166vw;left: 59.416vw;width: 16.666vw;height: 19.27vw;background: url('/static/images/sign/showBg.png');background-repeat: no-repeat;background-size: cover">-->
+        <!--<div style="text-align: center;padding-top: 2.08vw;height: 13.297vw">-->
+            <!--<img style="width: 5.729vw;height: 5.729vw;border-radius: 50%;" src="/static/images/4.jpg">-->
+        <!--</div>-->
+        <!--<img style="width:2.7vw;height:2.7vw;position: absolute;top: 10.3125vw;left:6.9791vw" src="/static/images/sign/right.png">-->
+        <!--<div style="text-align: center">-->
+            <!--<div style="font-size: 1.5625vw;color:#ffb4bc">欢迎光临</div>-->
+            <!--<div style="font-size: 1.25vw">黄忠中</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;展示区域的图片展示&ndash;&gt;-->
+    <!--<div style="position: absolute;top:31.769vw;left: 21.9166vw;width: 16.666vw;height: 19.27vw;background: url('/static/images/sign/showBg.png');background-repeat: no-repeat;background-size: cover">-->
+        <!--<div style="text-align: center;padding-top: 2.08vw;height: 13.297vw">-->
+            <!--<img style="width: 5.729vw;height: 5.729vw;border-radius: 50%;" src="/static/images/4.jpg">-->
+        <!--</div>-->
+        <!--<img style="width:2.7vw;height:2.7vw;position: absolute;top: 10.3125vw;left:6.9791vw" src="/static/images/sign/right.png">-->
+        <!--<div style="text-align: center">-->
+            <!--<div style="font-size: 1.5625vw;color:#ffb4bc">欢迎光临</div>-->
+            <!--<div style="font-size: 1.25vw">黄忠中</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;展示区域的图片展示&ndash;&gt;-->
+    <!--<div style="position: absolute;top:31.769vw;left: 40.666vw;width: 16.666vw;height: 19.27vw;background: url('/static/images/sign/showBg.png');background-repeat: no-repeat;background-size: cover">-->
+        <!--<div style="text-align: center;padding-top: 2.08vw;height: 13.297vw">-->
+            <!--<img style="width: 5.729vw;height: 5.729vw;border-radius: 50%;" src="/static/images/4.jpg">-->
+        <!--</div>-->
+        <!--<img style="width:2.7vw;height:2.7vw;position: absolute;top: 10.3125vw;left:6.9791vw" src="/static/images/sign/right.png">-->
+        <!--<div style="text-align: center">-->
+            <!--<div style="font-size: 1.5625vw;color:#ffb4bc">欢迎光临</div>-->
+            <!--<div style="font-size: 1.25vw">黄忠中</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;展示区域的图片展示&ndash;&gt;-->
+    <!--<div style="position: absolute;top:31.769vw;left: 59.416vw;width: 16.666vw;height: 19.27vw;background: url('/static/images/sign/showBg.png');background-repeat: no-repeat;background-size: cover">-->
+        <!--<div style="text-align: center;padding-top: 2.08vw;height: 13.297vw">-->
+            <!--<img style="width: 5.729vw;height: 5.729vw;border-radius: 50%;" src="/static/images/4.jpg">-->
+        <!--</div>-->
+        <!--<img style="width:2.7vw;height:2.7vw;position: absolute;top: 10.3125vw;left:6.9791vw" src="/static/images/sign/right.png">-->
+        <!--<div style="text-align: center">-->
+            <!--<div style="font-size: 1.5625vw;color:#ffb4bc">欢迎光临</div>-->
+            <!--<div style="font-size: 1.25vw">黄忠中</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+
+    <div style="color:white;font-size: 0.9375vw;position: absolute;bottom: 1.851vh;left: 45%">Powered By 纳智天地</div>
+    <!--<div class="dropdown" >-->
+        <!--&lt;!&ndash;<span class="glyphicon glyphicon-menu-down" style="color:rgb(116, 209, 214)"></span>&ndash;&gt;-->
+        <!--&lt;!&ndash;<ul class="dropdown-menu" >&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<li>1<span class="glyphicon glyphicon-ok"></span></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li>2</li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li>3</li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li>4</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+    <!--</div>-->
+</div>
+
+</body>
+<script  src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/show/show"></script>
+</html>
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/resourse.css">
+
+    <title><%= title %></title>
+</head>
+
+<body>
+<div class="margin30">
+    <form class="add">
+
+        <div class="addInput">
+            <label class="addLabel i18n" data-title="strComeFrome"><i style="color:red">*</i>会议主题:</label>
+            <input id="topic" type="text" class="form-control i18n-input" selectattr="strComeFrome_placeholder"  placeholder="请输入会议主题">
+
+        </div>
+
+        <div class="addInput">
+            <label class="addLabel i18n" data-title="strDealer"><i style="color:red">*</i>会议名称:</label>
+            <input id="name" type="text" class="form-control i18n-input" selectattr="strDealer_placeholder" placeholder="请输入会议名称">
+
+        </div>
+        <div class="addInput">
+            <label class="addLabel i18n" data-title="strComeFrome"><i style="color:red">*</i>会议地点:</label>
+            <input id="position" type="text" class="form-control i18n-input" selectattr="strComeFrome_placeholder"  placeholder="请输入会议地点">
+
+        </div>
+        <div class="addInput">
+            <label class="addLabel i18n" data-title="strComeFrome"><i style="color:red">*</i>会议日期:</label>
+            <input id="date" type="date" class="form-control i18n-input" selectattr="strComeFrome_placeholder"  placeholder="">
+
+        </div>
+        <div class="addInput">
+            <label class="addLabel i18n" data-title="strComeFrome"><i style="color:red">*</i>会议时间:</label>
+            <input id="time" type="time" class="form-control i18n-input" selectattr="strComeFrome_placeholder"  placeholder="">
+
+        </div>
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="decMoney">权限:</label>-->
+            <!--<select id="authority">-->
+                <!--<option value="0" selected>高级管理员</option>-->
+                <!--<option value="1">普通管理员</option>-->
+            <!--</select>-->
+
+        <!--</div>-->
+        <div class="addBtn">
+            <span type="button" id="addbutton" class="btn btn-success addbutton i18n " data-title="addButton">新增</span>
+        </div>
+
+
+
+    </form>
+</div>
+</body>
+<script src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/admin/meeting/add.js"></script>
+
+</html>
+

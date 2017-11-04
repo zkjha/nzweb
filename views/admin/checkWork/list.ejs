@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title><%= title %></title>
+    <link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/group.css">
+</head>
+
+<body>
+<div class="margin30">
+    <div class="search_tip"></div>
+    <div class="flex">
+        <span id="addGroup" class="otherBtn "><span class="i18n addBtn" data-title="addBtn">新增考勤规则</span></span>
+    </div>
+
+</div>
+<div class="margin30">
+    <div class="search_tip">
+        考勤规则管理列表
+    </div>
+    <table class="table table-hover" style="background: white">
+        <thead>
+        <tr>
+            <th class="i18n" data-title="groupName">名称</th>
+            <th class="i18n" data-title="createTime">最早签到时间</th>
+            <th class="i18n" data-title="createTime">最晚签到时间</th>
+            <th class="i18n" data-title="createTime">最早签退时间</th>
+            <th class="i18n" data-title="createTime">最晚签退时间</th>
+            <th class="i18n" data-title="createTime">操作</th>
+        </tr>
+        </thead>
+        <tbody id="j_body"></tbody>
+    </table>
+    <div class="page_div">
+        <span id="j_footer"></span>
+        <span id="j_pageNum" class="j_pageNum"></span>
+    </div>
+
+</div>
+</body>
+<script src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/admin/checkWork/list.js"></script>
+
+</html>
+

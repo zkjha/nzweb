@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title><%= title %></title>
+    <link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/group.css">
+</head>
+
+<body>
+<div class="margin30">
+    <div class="search_tip">请选择查询条件<span>(非必选项)</span></div>
+    <div class="search_param" style="background: white;height: 5.988vw;line-height: 5.988vw;padding-left: 1.796vw;">
+
+        <%if(type == 0){%>
+        <select id="gender" class="searchSelect">
+            <option value="" selected>选择性别</option>
+            <option value="0">男</option>
+            <option value="1">女</option>
+        </select>
+        <select id="group" class="searchSelect">
+            <option value="" selected>选择名单</option>
+            <option value="0">白名单</option>
+            <option value="1">黑名单</option>
+        </select>
+        <select id="company" class="searchSelect">
+            <option value="" selected>选择公司</option>
+        </select>
+        <select id="department" class="searchSelect">
+            <option value="" selected>选择部门</option>
+        </select>
+        <select id="position" class="searchSelect">
+            <option value="" selected>选择职位</option>
+        </select>
+        <div class="searchInput" style="display: inline-block">
+            <input id="userName" type="text" class="form-control" placeholder="请输入查询人员姓名">
+        </div>
+        <div class="searchInput" style="display: inline-block">
+            <input id="idNum" type="text" class="form-control" placeholder="请输入查询身份证号">
+        </div>
+
+        <div id="" class="otherBtn "><div class="i18n addBtn" data-title="addBtn">查询</div></div>
+        <div id="addGroup" data-type="<%=type%>"class="otherBtn "><div class="i18n addBtn" data-title="addBtn">新增员工</div></div>
+        <%}else if(type == 2){%>
+        <select id="gender" class="searchSelect">
+            <option value="" selected>选择性别</option>
+            <option value="0">男</option>
+            <option value="1">女</option>
+        </select>
+        <div class="searchInput" style="display: inline-block">
+            <input id="userName" type="text" class="form-control" placeholder="请输入查询人员姓名">
+        </div>
+        <div class="searchInput" style="display: inline-block">
+            <input id="idNum" type="text" class="form-control" placeholder="请输入查询身份证号">
+        </div>
+
+        <div id="querySearch" class=" otherBtn "><div class="i18n addBtn" data-title="addBtn">查询</div></div>
+        <div id="addGroup" data-type="<%=type%>" class="otherBtn "><div class="i18n addBtn" data-title="addBtn">新增访客</div></div>
+        <%}%>
+        <div id="addAllGroup" data-type="<%=type%>" class="otherBtn "><div class="i18n addBtn" data-title="addBtn">批量导入</div></div>
+
+    </div>
+
+</div>
+<div class="margin30">
+    <div class="search_tip">
+        员工信息管理列表
+    </div>
+    <table class="table table-hover" style="background: white">
+        <thead>
+        <tr>
+            <%if(type == 0){%>
+            <th class="i18n" data-title="groupName">头像</th>
+            <th class="i18n" data-title="createTime">姓名</th>
+            <th class="i18n" data-title="createTime">性别</th>
+            <th class="i18n" data-title="createTime">生日</th>
+            <th class="i18n" data-title="createTime">身份证号</th>
+            <th class="i18n" data-title="createTime">工号</th>
+            <th class="i18n" data-title="createTime">入职时间</th>
+            <th class="i18n" data-title="createTime">操作</th>
+
+            <%}else if(type == 2){%>
+            <th class="i18n" data-title="groupName">头像</th>
+            <th class="i18n" data-title="createTime">姓名</th>
+            <th class="i18n" data-title="createTime">性别</th>
+            <th class="i18n" data-title="createTime">身份证号</th>
+            <th class="i18n" data-title="createTime">来访时间</th>
+            <th class="i18n" data-title="createTime">操作</th>
+            <%}else{}%>
+
+        </tr>
+        </thead>
+        <tbody id="j_body"></tbody>
+    </table>
+    <div class="page_div">
+        <span id="j_footer"></span>
+        <span id="j_pageNum" class="j_pageNum"></span>
+    </div>
+
+</div>
+<div class="currentType" data-type="<%=type%>"></div>
+</body>
+<script src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/admin/photo/list.js"></script>
+
+</html>
+

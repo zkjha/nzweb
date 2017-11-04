@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/group.css">
+
+    <title><%= title %></title>
+</head>
+
+<body>
+<div class="margin30">
+    <div class="search_tip" style="font-size: 1.077vw">新增摄像头</div>
+    <form class="addForm">
+        <div class="addInput">
+            <label class="addLabel i18n" data-title="strDealer">ip:</label>
+            <input id="CamIp" type="text" class="" selectattr="strDealer_placeholder" placeholder="请输入网络摄像头ip地址">
+
+        </div>
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">密码:</label>-->
+            <!--<input id="password" type="text" class="form-control i18n-input" selectattr="strDealer_placeholder" placeholder="请输入网络摄像头密码">-->
+
+        <!--</div>-->
+        <div class="addInput marginRight">
+            <label class="addLabel i18n" data-title="strComeFrome">昵称:</label>
+            <input id="name" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入对摄像头的名称">
+
+        </div>
+        <div class="addInput ">
+            <label class="addLabel i18n" data-title="strComeFrome">地址:</label>
+            <input id="address" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入摄像头所在地址">
+
+        </div>
+        <div class="addBtn">
+            <div type="button" id="addbutton" class=" addbutton i18n "  style="margin-left:4.39vw;" data-title="addButton">新增</div>
+        </div>
+
+
+
+    </form>
+</div>
+</body>
+<script src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/admin/camera/add.js"></script>
+
+</html>
+

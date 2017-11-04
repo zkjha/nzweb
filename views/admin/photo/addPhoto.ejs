@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/resourse.css">-->
+    <link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/group.css">
+
+    <title><%= title %></title>
+</head>
+
+<body>
+<div class="margin30">
+    <div class="search_tip" style="font-size: 1.077vw">新增员工</div>
+    <form class="addForm" style="">
+
+    <%if(type == 0){%>
+        <%if(uploadType == "All"){%>
+        <div class="addInput">
+            <div id="fileDiv" style="display: none" ></div>
+            <div class="addLabel" data-title="strDealer" style="">上传文件:</div>
+            <div id="fileBtn"  class="uploadfile" style="cursor: pointer">上传文件</div>
+            <div class="process" style="display:none;margin-right: 47.84vw;margin-left: 1.197vw;width: 17.964vw;display: inline-block;position: relative">
+                <div class="processDiv" style="display:inline-block;width: 17.964vw;height: 1.2vw;background: #eef4f8;border-radius: 0.598vw;position: absolute;top: -0.9185vw;left: 0vw ">
+                    <span style=" background: #00caca;height: 100%;display: inline-block;border-top-left-radius: 0.598vw;border-bottom-left-radius: 0.598vw;"></span>
+                </div>
+                <span style="color:#00caca;display: inline-block;font-size: 0.985vw;position: absolute;top:-0.9185vw;right: -3vw">50%</span>
+                <div class="uploadSuccess" style="display:none;position: absolute;top: -0.978vw; right: -8.815vw;font-size: 0.958vw">
+                    <img src="/static/images/admin/success.png">上传成功
+                </div>
+                <div class="uploadFail" style="display:none;position: absolute;top: -0.978vw; right: -8.815vw;font-size: 0.958vw">
+                    <img src="/static/images/admin/fail.png">上传失败
+                </div>
+            </div>
+
+
+
+        </div>
+        <!--上传压缩文件-->
+        <div class="addInput" style="line-height: 1.7365vw;display: block">
+            <div class="addLabel i18n" style="" data-title="strDealer">注意事项:</div>
+            <div id="text" type="text" class="" style="    display: inline-block;width: 35vw;
+            height: 7.185vw;background: #eaeef1;padding: 0.5vw;margin-left: 1vw;margin-top: 1vw;">批量上传图片，图片的命名规则为:
+                <div style="color:#d3d6d8">&nbsp&nbsp<span style="border: 2px solid #329ff1; width: 1px;height: 1px;display: inline-block;margin-bottom: 3px; border-radius: 50%;"></span>&nbsp&nbsp姓名_黑白名单(0为白名单，1为黑名单)_身份证号/工号,
+                  中间为下划线,例如：李四_0_5002359746599499754;</div>
+            </div>
+        </div>
+        <%}else{%>
+        <!--员工-->
+        <div class="" style="margin-bottom:1.1976vw ">
+            <div class="addLabel" style="">上传头像:</div>
+            <img id="fileDiv" class="fileDiv" src="/static/images/admin/defaultImg.png">
+            <div id="fileBtn"  class="uploadfile" style="">上传图片</div>
+        </div>
+        <!--上传图片或者视频-->
+        <div class="addInput" style="">
+            <div class="addLabel" data-title="strDealer" style="">姓名:</div>
+            <input id="userName"  style="" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入姓名">
+        </div>
+        <div class="addInput marginRight" style="display: inline-block">
+            <div class="addLabel i18n" data-title="strDealer" >性别:</div>
+            <div class="input_radio gender my_inlineBlock marginLeft20 radio_select" data-type="0" style="">男
+            </div><div class="input_radio gender my_inlineBlock" data-type="1" style="">女
+            </div>
+        </div>
+        <div class="addInput">
+            <div class="addLabel i18n" data-title="strDealer">身份证号:</div>
+            <input id="IDnumber" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入身份证号码">
+        </div>
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">工号:</div>
+            <input id="jobNumber" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入工号">
+        </div>
+        <div class="addInput ">
+            <div class="addLabel i18n" data-title="strDealer">生日:</div>
+            <input id="brithDay" type="date" class="" selectattr="strComeFrome_placeholder"  placeholder="请选择生日">
+        </div>
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">入职时间:</div>
+            <input id="comeDay" type="date" class="" selectattr="strComeFrome_placeholder"  placeholder="请选择入职时间">
+        </div>
+
+        <!--城市-->
+        <div class="addInput">
+            <div class="addLabel" data-title="strDealer">城市:</div>
+            <select id="city" class=""></select>
+        </div>
+
+        <!--公司-->
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">公司:</div>
+            <select id="company" class=""></select>
+        </div>
+        <!--部门-->
+        <div class="addInput">
+            <div class="addLabel i18n" data-title="strDealer">部门:</div>
+            <select id="department" class=""></select>
+        </div>
+
+        <!--职位-->
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">职位:</div>
+            <select id="position" class=""></select>
+        </div>
+        <!--考勤规则-->
+        <div class="addInput">
+            <div class="addLabel i18n" data-title="strDealer">考勤规则:</div>
+            <select id="attendance" class=""></select>
+        </div>
+        <!--louhao-->
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">楼号:</div>
+            <input id="addr" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入上班楼号">
+        </div>
+        <div class="addInput">
+            <div class="addLabel i18n" data-title="strDealer">名单:</div>
+            <div class="input_radio group my_inlineBlock marginLeft20 radio_select" data-type="0" style="">白名单
+            </div><div class="input_radio group my_inlineBlock" data-type="1" style="">黑名单
+            </div>
+        </div>
+    <%}%>
+
+    <%}else if(type == 2){%>
+        <!--访客模式-->
+
+        <%if(uploadType == "All"){%>
+        <!--上传压缩文件-->
+        <div class="addInput">
+            <div id="fileDiv" style="display: none"></div>
+            <div class="addLabel" data-title="strDealer" style="">上传文件:</div>
+            <div id="fileBtn"  class="uploadfile" style="cursor: pointer">上传文件</div>
+            <div class="process" style="margin-right: 47.84vw;margin-left: 1.197vw;width: 17.964vw;display: inline-block;position: relative">
+                <div class="processDiv" style="display:inline-block;width: 17.964vw;height: 1.2vw;background: #eef4f8;border-radius: 0.598vw;position: absolute;top: -0.9185vw;left: 0vw ">
+                    <span style="    width: 50%;background: #00caca;height: 100%;display: inline-block;border-top-left-radius: 0.598vw;border-bottom-left-radius: 0.598vw;"></span>
+                </div>
+                <span style="color:#00caca;display: inline-block;font-size: 0.985vw;position: absolute;top:-0.9185vw;right: -3vw">50%</span>
+                <div class="uploadSuccess" style="display:none;position: absolute;top: -0.978vw; right: -8.815vw;font-size: 0.958vw">
+                    <img src="/static/images/admin/success.png">上传成功
+                </div>
+                <div class="uploadFail" style="display:none;position: absolute;top: -0.978vw; right: -8.815vw;font-size: 0.958vw">
+                    <img src="/static/images/admin/fail.png">上传失败
+                </div>
+            </div>
+
+
+
+        </div>
+        <!--上传压缩文件-->
+        <div class="addInput" style="line-height: 1.7365vw;display: block">
+            <div class="addLabel i18n" style="" data-title="strDealer">注意事项:</div>
+            <div id="text" type="text" class="" style="    display: inline-block;width: 35vw;
+            height: 7.185vw;background: #eaeef1;padding: 0.5vw;margin-left: 1vw;margin-top: 1vw;">批量上传图片，图片的命名规则为:
+                <div style="color:#d3d6d8">&nbsp&nbsp<span style="border: 2px solid #329ff1; width: 1px;height: 1px;display: inline-block;margin-bottom: 3px; border-radius: 50%;"></span>&nbsp&nbsp姓名_黑白名单(0为白名单，1为黑名单)_身份证号/工号,
+                    中间为下划线,例如：李四_0_5002359746599499754;</div>
+            </div>
+        </div>
+        <%}else{%>
+        <!--访客-->
+        <div class="" style="margin-bottom:1.1976vw ">
+            <div class="addLabel" data-title="strDealer">上传图片:</div>
+            <img id="fileDiv" class="fileDiv" src="/static/images/admin/defaultImg.png">
+            <div id="fileBtn"  class="uploadfile" >上传图片</div>
+        </div>
+        <div class="addInput">
+            <div class="addLabel" data-title="strDealer">姓名:</div>
+            <input id="userName" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入姓名">
+        </div>
+        <div class="addInput marginRight" style="display: inline-block">
+            <div class="addLabel i18n" data-title="strDealer" >性别:</div>
+            <div class="input_radio my_inlineBlock gender radio_select marginLeft20" data-type="0" style="">男
+            </div><div class="input_radio gender my_inlineBlock" data-type="1" style="">女
+            </div>
+        </div>
+        <div class="addInput">
+            <div class="addLabel i18n" data-title="strDealer">身份证号:</div>
+            <input id="IDnumber" type="text" class="" selectattr="strComeFrome_placeholder"  placeholder="请输入身份证号码">
+        </div>
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">来访日期:</div>
+            <input id="comeDay" type="date" class="" selectattr="strComeFrome_placeholder"  placeholder="请选择来访日期">
+        </div>
+        <div class="addInput">
+            <div class="addLabel i18n" data-title="strDealer">来访时间:</div>
+            <input id="comeTime" type="time" class="" selectattr="strComeFrome_placeholder"  placeholder="请选择来访时间">
+        </div>
+        <div class="addInput marginRight">
+            <div class="addLabel i18n" data-title="strDealer">名单:</div>
+            <div class="input_radio group my_inlineBlock marginLeft20 radio_select" data-type="0" style="">白名单
+            </div><div class="input_radio group my_inlineBlock" data-type="1" style="">黑名单
+            </div>
+        </div>
+        <%}%>
+    <%}%>
+        <div class="">
+            <div  id="addbutton" data-uploadType="<%=uploadType%>" data-type="<%=type%>" class=" addbutton" data-title="addButton">新增</div>
+        </div>
+
+    </form>
+</div>
+</body>
+<script src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/admin/photo/add.js"></script>
+
+</html>
+

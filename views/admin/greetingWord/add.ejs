@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link type="text/css" rel="stylesheet" href="/static/stylesheets/pages/resourse.css">
+
+    <title><%= title %></title>
+</head>
+
+<body>
+<div class="margin30">
+    <form class="add">
+        <div class="addInput">
+            <label class="addLabel i18n" data-title="decMoney">适用人群:</label>
+            <select id="type">
+                <option value="0" selected>员工</option>
+                <option value="2">访客</option>
+            </select>
+        </div>
+        <!--<div class="addInput">-->
+            <!--<label class="addLabel i18n" data-title="strDealer">密码:</label>-->
+            <!--<input id="password" type="text" class="form-control i18n-input" selectattr="strDealer_placeholder" placeholder="请输入网络摄像头密码">-->
+
+        <!--</div>-->
+        <div class="addInput">
+            <label class="addLabel i18n" data-title="strComeFrome">欢迎词:</label>
+            <textarea id="greetingWord"  style="width: 65%;height:50px" placeholder="请输入迎宾词语"></textarea>
+        </div>
+        <div class="addBtn">
+            <span type="button" id="addbutton" class="btn btn-success addbutton i18n " data-title="addButton">新增</span>
+        </div>
+
+
+
+    </form>
+</div>
+</body>
+<script src="/static/javascripts/lib/require.js" data-main="/static/javascripts/pages/admin/greetingWord/add.js"></script>
+
+</html>
+
